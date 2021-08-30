@@ -1,5 +1,5 @@
 fun main(){
-    val amount = 600_000
+    val amount = "70000"
     val bankCard = "Maestro"
     val theAmountOfPreviousTransfersInThisMonth = 7500000
     val result = calculationOfTheCommission(bankCard, amount,
