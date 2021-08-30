@@ -97,10 +97,17 @@ class DifferentCommissionKtTest {
     @Test
     fun calculationOfTheCommission_variantElse() {
         val amount = 600_000
-        val bankCard = "VK y"
+        val bankCard = "Alpha"
         val theAmountOfPreviousTransfersInThisMonth = 740000
         val result = calculationOfTheCommission(bankCard = bankCard, amount = amount,
             theAmountOfPreviousTransfersInThisMonth = theAmountOfPreviousTransfersInThisMonth)
         assertEquals("такие карты или счета не принимаються", result)
+    }
+
+    @Test
+    fun calculationOfTheCommission_notAddData() {
+        val amount = 600_000
+        val result = calculationOfTheCommission(amount = amount)
+        assertEquals("нет комисси", result)
     }
 }
